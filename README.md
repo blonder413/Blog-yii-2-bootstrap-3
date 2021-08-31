@@ -53,6 +53,13 @@ Agregarlo también a config\console.php
 git clone https://gitlab.com/blonder413/blog-yii-2-bootstrap-3
 ```
 
+Instalar extensiones
+
+```
+cd blog-yii-2-bootstrap-3
+composer install
+```
+
 Ejecutar las migraciones para crear las tablas
 
 ```
