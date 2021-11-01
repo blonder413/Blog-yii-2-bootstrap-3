@@ -15,7 +15,7 @@ class ArticuloQuery extends ActiveQuery
     
     /**
      * Este método filtra los artículos activos
-     * @param boolean $estado Estado del arttículo
+     * @param boolean $estado Estado del artículo
      * @return mixed condición que el estado sea el pasado
      */
     public function active($estado = true)
