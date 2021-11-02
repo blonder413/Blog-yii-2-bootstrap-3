@@ -3,14 +3,10 @@
 namespace app\controllers;
 
 use Yii;
-use app\models\User;
-use app\models\UserSearch;
+use app\models\{User, UserSearch};
 use yii\db\Query;
-use yii\web\Controller;
-use yii\web\ForbiddenHttpException;
-use yii\web\NotFoundHttpException;
-use yii\web\Response;
 use yii\filters\VerbFilter;
+use yii\web\{Controller, ForbiddenHttpException, NotFoundHttpException, Response};
 
 /**
  * UserController implements the CRUD actions for User model.

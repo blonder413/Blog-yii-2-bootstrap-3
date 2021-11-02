@@ -5,8 +5,7 @@ namespace app\controllers;
 use app\models\Articulo;
 use yii\filters\AccessControl;
 use yii\db\Query;
-use yii\web\Controller;
-use yii\web\ForbiddenHttpException;
+use yii\web\{Controller, ForbiddenHttpException};
 
 /**
  * GraphicsController implements graphics

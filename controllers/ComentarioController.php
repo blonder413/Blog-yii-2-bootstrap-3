@@ -3,13 +3,9 @@
 namespace app\controllers;
 
 use Yii;
-use app\models\Comentario;
-use app\models\ComentarioSearch;
-use yii\web\Controller;
-use yii\web\ForbiddenHttpException;
-use yii\web\NotFoundHttpException;
-use yii\filters\AccessControl;
-use yii\filters\VerbFilter;
+use app\models\{Comentario, ComentarioSearch};
+use yii\web\{Controller, ForbiddenHttpException, NotFoundHttpException};
+use yii\filters\{AccessControl, VerbFilter};
 
 /**
  * ComentarioController implements the CRUD actions for Comentario model.

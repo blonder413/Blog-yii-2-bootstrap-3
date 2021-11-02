@@ -3,12 +3,9 @@
 namespace app\controllers;
 
 use Yii;
-use app\models\Transmision;
-use app\models\TransmisionSearch;
-use yii\web\Controller;
-use yii\web\ForbiddenHttpException;
-use yii\web\NotFoundHttpException;
+use app\models\{Transmision, TransmisionSearch};
 use yii\filters\VerbFilter;
+use yii\web\{Controller, ForbiddenHttpException, NotFoundHttpException};
 
 /**
  * TransmisionController implements the CRUD actions for Transmision model.

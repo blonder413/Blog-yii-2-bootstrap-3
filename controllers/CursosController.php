@@ -3,15 +3,9 @@
 namespace app\controllers;
 
 use Yii;
-use app\models\Curso;
-use app\models\CursoSearch;
-use app\models\Helper;
-use yii\filters\AccessControl;
-use yii\filters\VerbFilter;
-use yii\web\Controller;
-use yii\web\ForbiddenHttpException;
-use yii\web\NotFoundHttpException;
-use yii\web\UploadedFile;
+use app\models\{Curso, CursoSearch, Helper};
+use yii\filters\{AccessControl, VerbFilter};
+use yii\web\{Controller, ForbiddenHttpException, NotFoundHttpException, UploadedFile};
 
 /**
  * CursoController implements the CRUD actions for Curso model.

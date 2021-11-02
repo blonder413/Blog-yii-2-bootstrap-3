@@ -3,18 +3,10 @@
 namespace app\controllers;
 
 use Yii;
-use app\models\ArticuloSearch;
-use app\models\Categoria;
-use app\models\CategoriaSearch;
-use app\models\Helper;
+use app\models\{ArticuloSearch, Categoria, CategoriaSearch, Helper};
 use yii\db\Query;
-use yii\filters\AccessControl;
-use yii\filters\VerbFilter;
-use yii\web\Controller;
-use yii\web\ForbiddenHttpException;
-use yii\web\NotFoundHttpException;
-use yii\web\Response;
-use yii\web\UploadedFile;
+use yii\filters\{AccessControl, VerbFilter};
+use yii\web\{Controller , ForbiddenHttpException, NotFoundHttpException, Response, UploadedFile};
 use ZipArchive;
 
 /**

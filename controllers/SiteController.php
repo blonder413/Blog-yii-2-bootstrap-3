@@ -2,33 +2,16 @@
 
 namespace app\controllers;
 
-use app\models\Articulo;
-use app\models\Categoria;
-use app\models\Comentario;
-use app\models\ContactForm;
-use app\models\Curso;
-use app\models\Helper;
-use app\models\LoginForm;
-use app\models\PasswordResetRequestForm;
-use app\models\ResendVerificationEmailForm;
-use app\models\ResetPasswordForm;
-use app\models\Seguridad;
-use app\models\SignupForm;
-use app\models\Transmision;
-use app\models\User;
-use app\models\VerifyEmailForm;
+use app\models\{Articulo, Categoria, Comentario, ContactForm, Curso, Helper, LoginForm, PasswordResetRequestForm};
+use app\models\{ResendVerificationEmailForm, ResetPasswordForm, Seguridad, SignupForm, Transmision, User, VerifyEmailForm};
 use Yii;
+use yii\base\InvalidArgumentException;
 use yii\data\Pagination;
 use yii\db\Expression;
-use yii\filters\AccessControl;
-use yii\filters\VerbFilter;
+use yii\filters\{AccessControl, VerbFilter};
 use yii\helpers\Html;
-use yii\web\Controller;
-use yii\web\NotFoundHttpException;
-use yii\web\Response;
-use yii\web\UploadedFile;
-use yii\base\InvalidArgumentException;
-use yii\web\BadRequestHttpException;
+use yii\web\{Controller, NotFoundHttpException, Response, UploadedFile, BadRequestHttpException};
+
 
 class SiteController extends Controller
 {

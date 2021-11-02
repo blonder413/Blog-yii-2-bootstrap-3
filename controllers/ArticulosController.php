@@ -3,16 +3,10 @@
 namespace app\controllers;
 
 use Yii;
-use app\models\Articulo;
-use app\models\ArticuloSearch;
-use yii\db\Exception;
-use yii\db\Query;
-use yii\filters\AccessControl;
-use yii\filters\VerbFilter;
-use yii\web\Controller;
-use yii\web\ForbiddenHttpException;
-use yii\web\NotFoundHttpException;
-use yii\web\Response;
+use app\models\{Articulo,ArticuloSearch};
+use yii\db\{Exception,Query};
+use yii\filters\{AccessControl, VerbFilter};
+use yii\web\{Controller, ForbiddenHttpException, NotFoundHttpException, Response};
 
 /**
  * ArticulosController implements the CRUD actions for Articulo model.
