@@ -15,8 +15,6 @@ use yii\web\{Controller, NotFoundHttpException, Response, UploadedFile, BadReque
 
 class SiteController extends Controller
 {
-    public $_view = 'vistas';
-
     /**
      * {@inheritdoc}
      */
