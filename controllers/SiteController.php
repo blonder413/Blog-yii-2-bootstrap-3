@@ -15,7 +15,8 @@ use yii\web\{Controller, NotFoundHttpException, Response, UploadedFile, BadReque
 
 class SiteController extends Controller
 {
-//    public $layout = 'adminLTE/main';
+    public $_view = 'vistas';
+
     /**
      * {@inheritdoc}
      */

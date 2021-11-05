@@ -5,7 +5,7 @@ namespace app\controllers;
 use Yii;
 use app\models\{User, UserSearch};
 use yii\db\Query;
-use yii\filters\VerbFilter;
+use yii\filters\{AccessControl, VerbFilter};
 use yii\web\{Controller, ForbiddenHttpException, NotFoundHttpException, Response};
 
 /**
@@ -21,6 +21,16 @@ class UserController extends Controller
     public function behaviors()
     {
         return [
+            'access' => [
+                'class' => AccessControl::class,
+                'rules' => [
+                    [
+                        'allow' => true,
+                        'actions' => ['index', 'create', 'update', 'delete', 'buscar'],
+                        'roles' => ['@'],
+                    ],
+                ],
+            ],
             'verbs' => [
                 'class' => VerbFilter::class,
                 'actions' => [
@@ -158,6 +168,7 @@ class UserController extends Controller
             $out['results'] = array_values($data);
         }
 
+//        print_r($out); exit;
         return $out;
     }
     

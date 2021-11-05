@@ -1,9 +1,9 @@
 <?php
 
+use app\models\User;
 use kartik\grid\GridView;
 use kartik\select2\Select2;
-use yii\helpers\Html;
-use yii\helpers\Url;
+use yii\helpers\{ArrayHelper, Html, Url};
 use yii\web\JsExpression;
 
 /* @var $this yii\web\View */
@@ -49,11 +49,22 @@ $this->params['breadcrumbs'][] = $this->title;
                     }
                 },
                 'format' => 'raw',
+                'filter'    => Select2::widget([
+                    'model' => $searchModel,
+                    'attribute' => 'usuario_crea',
+                    'data' => ArrayHelper::map(User::find()->orderBy('name asc')->all(), 'id', 'name'),
+                    'options' => ['placeholder' => 'Usuario crea...'],
+                    'pluginOptions' => [
+                        'allowClear' => true
+                    ],
+                ]),
+/*
                 'filter' => Select2::widget([
                     'model' => $searchModel,
                     'attribute' => 'usuario_crea',
-                    'initValueText' => $searchModel->usuario_crea != '' ? $searchModel->usuarioCrea->name : '',
-                    'options' => ['placeholder' => 'Busque el usuario'],
+//                    'initValueText' => $searchModel->usuario_crea != '' ? $searchModel->usuarioCrea->name : '',
+                    'initValueText' => is_numeric($searchModel->usuario_crea) ? ucwords(strtolower($searchModel->usuarioCrea->nombre)) : '',
+                    'options' => ['placeholder' => 'Usuario'],
                     'pluginOptions' => [
                         'allowClear' => true,
                         'minimumInputLength' => 3,
@@ -61,7 +72,7 @@ $this->params['breadcrumbs'][] = $this->title;
                             'errorLoading' => new JsExpression("function () { return 'Cargando Resultados...'; }"),
                         ],
                         'ajax' => [
-                            'url' => Url::to(['user/buscar']),
+                            'url' => Url::to(['/user/buscar']),
                             'dataType' => 'json',
                             'data' => new JsExpression('function(params) { return {q:params.term}; }'),
                         ],
@@ -70,6 +81,7 @@ $this->params['breadcrumbs'][] = $this->title;
                         'templateSelection' => new JsExpression('function (user) { return user.text; }'),
                     ],
                 ]),
+*/
             //'options' => ['width' => '10%'],
             ],
             //[

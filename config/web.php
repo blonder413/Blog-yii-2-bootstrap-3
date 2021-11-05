@@ -15,6 +15,7 @@ $config = [
     'sourceLanguage'    => 'es-CO',
     'version'           => '2.0',
     'timeZone'          => 'America/Bogota',
+//    'viewPath'       => '@app/vistas/',
     'basePath' => dirname(__DIR__),
     'bootstrap' => ['log'],
     'aliases' => [
