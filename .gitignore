@@ -4,9 +4,14 @@
 /config/mailer.php
 
 # directorios de imágenes
-/web/img/categorias/*
-/web/img/cursos/*
-/web/img/users/*
+/web/img/categorias/*.jpg
+/web/img/categorias/*.png
+/web/img/cursos/*.jpg
+/web/img/cursos/*.png
+/web/img/users/*.jpg
+/web/img/users/*.png
+/web/img/webs/*.jpg
+/web/img/webs/*.png
 
 # phpstorm project files
 .idea
