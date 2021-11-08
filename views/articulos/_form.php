@@ -38,7 +38,7 @@ use yii\widgets\ActiveForm;
 
     <?= $form->field($model, 'descarga')->textInput(['maxlength' => true]) ?>
 
-    <?= $form->field($model, 'categoria_id')->widget(Select2::classname(), [
+    <?php /*echo $form->field($model, 'categoria_id')->widget(Select2::classname(), [
         'model' => $model,
         'initValueText' => isset($model->categoria_id) ? $model->categoria->categoria : '',
 //                'attribute' => 'categoria_id',
@@ -57,6 +57,15 @@ use yii\widgets\ActiveForm;
             'escapeMarkup' => new JsExpression('function (markup) { return markup; }'),
             'templateResult' => new JsExpression('function (categoria) { return categoria.text; }'),
             'templateSelection' => new JsExpression('function (categoria) { return categoria.text; }'),
+        ],
+    ]); */ ?>
+
+    <?= $form->field($model, 'categoria_id')->widget(Select2::class, [
+        'data' => ArrayHelper::map(Categoria::find()->orderBy('categoria asc')->all(), 'id', 'categoria'),
+        'language' => 'es',
+        'options' => ['placeholder' => 'Categoría ...'],
+        'pluginOptions' => [
+            'allowClear' => true
         ],
     ]); ?>
 

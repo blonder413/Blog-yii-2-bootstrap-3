@@ -111,12 +111,12 @@ $config = [
             'defaultFontSize'   => 12,
             // refer settings section for all configuration options
         ],
-        'session' => [
-            'class' => 'yii\web\DbSession',
+//        'session' => [
+//            'class' => 'yii\web\DbSession',
             // 'db' => 'mydb',  // el identificador del componente de aplicación DB connection. Por defecto'db'.
             // 'sessionTable' => 'my_session', // nombre de la tabla de sesión. Por defecto 'session'.
             // 'timeout' => 10, segundos de inactividad para expirar la sesión
-        ],
+//        ],
         'authManager'       => [
             'class'         => 'yii\rbac\DbManager',
             'defaultRoles'  => ['guest'],
