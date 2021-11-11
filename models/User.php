@@ -51,6 +51,17 @@ class User extends ActiveRecord implements IdentityInterface
     /**
      * {@inheritdoc}
      */
+    public function beforeSave($insert)
+    {
+        parent::beforeSave($insert);
+
+        $this->email = Seguridad::encriptar($this->email);
+        return true;
+    }
+
+    /**
+     * {@inheritdoc}
+     */
     public function rules()
     {
         return [

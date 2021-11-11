@@ -4,6 +4,8 @@
 /config/mailer.php
 
 # directorios de imágenes
+/web/img/*.jpg
+/web/img/*.png
 /web/img/categorias/*.jpg
 /web/img/categorias/*.png
 /web/img/cursos/*.jpg
