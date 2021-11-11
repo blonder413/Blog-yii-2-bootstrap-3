@@ -1,11 +1,12 @@
 <?php
 namespace app\models;
 
-use Yii;
+use app\models\Seguridad;
 use yii\base\NotSupportedException;
 use yii\behaviors\TimestampBehavior;
 use yii\db\ActiveRecord;
 use yii\web\IdentityInterface;
+use Yii;
 
 /**
  * User model
@@ -46,17 +47,6 @@ class User extends ActiveRecord implements IdentityInterface
         return [
             TimestampBehavior::className(),
         ];
-    }
-
-    /**
-     * {@inheritdoc}
-     */
-    public function beforeSave($insert)
-    {
-        parent::beforeSave($insert);
-
-        $this->email = Seguridad::encriptar($this->email);
-        return true;
     }
 
     /**

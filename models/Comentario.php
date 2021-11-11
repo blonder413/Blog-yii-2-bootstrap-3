@@ -2,8 +2,7 @@
 
 namespace app\models;
 
-use app\models\ComentarioQuery;
-use app\models\Seguridad;
+use app\models\{ComentarioQuery, Seguridad};
 use Yii;
 
 /**
@@ -78,12 +77,24 @@ class Comentario extends \yii\db\ActiveRecord
             'puerto'        => 'Puerto',
         ];
     }
+
+    /**
+     * {@inheritdoc}
+     */
+    public function afterFind()
+    {
+        parent::afterFind();
+        $this->correo = Seguridad::desencriptar($this->correo);
+//        return true;
+    }
     
     /**
      * {@inheritdoc}
      */
     public function beforeSave($insert)
     {
+        parent::beforeSave($insert);
+
         /*
         if (parent::beforeSave($insert)) {
             if ($this->isNewRecord) {
@@ -92,14 +103,14 @@ class Comentario extends \yii\db\ActiveRecord
             return true;
         }
         */
-        if (parent::beforeSave($insert)) {
-            if ($insert) {
+//        if (parent::beforeSave($insert)) {
+//            if ($insert) {
                 $this->correo = Seguridad::encriptar($this->correo);
-            }
+//            }
             return true;
-        } else {
-            return false;
-        }
+//        } else {
+//            return false;
+//        }
     }
     
     /**

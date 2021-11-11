@@ -212,7 +212,8 @@ class Articulo extends MiActiveRecord
      */
     public function getComentarios()
     {
-        return $this->hasMany(Comentario::className(), ['articulo_id' => 'id']);
+        return $this->hasMany(Comentario::class, ['articulo_id' => 'id'])
+                    ->orderBy(['id' => SORT_DESC]);
     }
     
     /**

@@ -1,11 +1,9 @@
 <?php
 use app\models\Comentario;
-use app\models\Seguridad;
 use kartik\date\DatePicker;
 use kartik\grid\GridView;
 use kartik\select2\Select2;
-use yii\helpers\Html;
-use yii\helpers\Url;
+use yii\helpers\{Html, Url};
 use yii\web\JsExpression;
 
 $this->title =  Html::encode( '(' . $pendientes . ') Comentarios');
@@ -23,7 +21,7 @@ echo GridView::widget([
             'attribute' => 'correo',
             'format' => 'email',
             'value' => function ($searchModel) {
-                return Seguridad::desencriptar($searchModel->correo);
+                return $searchModel->correo;
             }
         ],
         'web:url',
