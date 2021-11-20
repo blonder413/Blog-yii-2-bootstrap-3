@@ -19,7 +19,7 @@ class ComentarioSearch extends Comentario
     {
         return [
             [['id', 'articulo_id', 'estado'], 'integer'],
-            [['nombre', 'correo', 'web', 'rel', 'comentario', 'fecha', 'ip', 'puerto'], 'safe'],
+            [['nombre', 'correo', 'web', 'rel', 'comentario', 'fecha'], 'safe'],
         ];
     }
 
@@ -79,9 +79,9 @@ class ComentarioSearch extends Comentario
             ->andFilterWhere(['like', 'web', $this->web])
             ->andFilterWhere(['like', 'rel', $this->rel])
             ->andFilterWhere(['like', 'fecha', $this->fecha])
-            ->andFilterWhere(['like', 'comentario', $this->comentario])
-            ->andFilterWhere(['like', 'ip', $this->ip])
-            ->andFilterWhere(['like', 'puerto', $this->puerto]);
+            ->andFilterWhere(['like', 'comentario', $this->comentario]);
+//            ->andFilterWhere(['like', 'ip', $this->ip])
+//            ->andFilterWhere(['like', 'puerto', $this->puerto]);
 
         return $dataProvider;
     }

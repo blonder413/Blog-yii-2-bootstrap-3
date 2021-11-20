@@ -15,7 +15,8 @@ class Helper {
      * @param String @fecha Fecha de nacimiento
      * @return Int edad calculada
      */
-    public static function calculaEdad($fecha) {
+    public static function calculaEdad($fecha)
+    {
         //fecha actual
 
         $dia = date("j");
@@ -51,19 +52,21 @@ class Helper {
      * Obtener le IP del usuario
      * @return String IP del usuario
      */
-    public static function getRealIP() {
-        if (!empty($_SERVER['HTTP_CLIENT_IP']))
-            return $_SERVER['HTTP_CLIENT_IP'];
-        elseif (!empty($_SERVER['HTTP_X_FORWARDED_FOR']))
-            return $_SERVER['HTTP_X_FORWARDED_FOR'];
-        else
-            return $_SERVER['REMOTE_ADDR'];
-    }
+//    public static function getRealIP()
+//    {
+//        if (!empty($_SERVER['HTTP_CLIENT_IP']))
+//            return $_SERVER['HTTP_CLIENT_IP'];
+//        elseif (!empty($_SERVER['HTTP_X_FORWARDED_FOR']))
+//            return $_SERVER['HTTP_X_FORWARDED_FOR'];
+//        else
+//            return $_SERVER['REMOTE_ADDR'];
+//    }
 
     // Cortar textos sin cortar palabras
     // Original PHP code by Chirp Internet: www.chirp.com.au
     // Please acknowledge use of this code by including this header.
-    public static function myTruncate($string, $limit, $break = " ", $pad = "...") {
+    public static function myTruncate($string, $limit, $break = " ", $pad = "...")
+    {
         // return with no change if string is shorter than $limit
         if (strlen($string) <= $limit) {
             return $string;
@@ -82,7 +85,8 @@ class Helper {
      * @param String $entra texto
      * @return String texto en formato slug
      */
-    public static function limpiaUrl($entra) {
+    public static function limpiaUrl($entra)
+    {
         $traduce = array(
             'á' => 'a',
             'é' => 'e',

@@ -141,8 +141,8 @@ class SiteController extends Controller
 //            date_default_timezone_set('America/Bogota');
             $comentario->fecha          = new Expression('NOW()');
             $comentario->articulo_id    = $articulo->id;
-            $comentario->ip             = Helper::getRealIP();
-            $comentario->puerto         = $_SERVER['REMOTE_PORT'];
+//            $comentario->ip             = Helper::getRealIP();
+//            $comentario->puerto         = $_SERVER['REMOTE_PORT'];
             $comentario->rel            = "nofollow";
             
 //            if (!$comentarop->validate()) {
@@ -150,9 +150,6 @@ class SiteController extends Controller
 //                return \yii\widgets\ActiveForm::validate($comentario);
 //            }
 
-            $listaNegra = [
-            ];
-            
             $comentarioAnterior = Comentario::find()->where(
                 "correo = :correo AND articulo_id = :articulo AND comentario = :comentario",
                 [ 
@@ -162,6 +159,8 @@ class SiteController extends Controller
                 ]
             )->count();
             
+            /*
+            $listaNegra = [];
             if ( in_array($comentario->ip, $listaNegra) or $comentarioAnterior > 0 ) {
                 $comentario = new Comentario(['scenario' => 'comentar']);
                 Yii::$app->session->setFlash(
@@ -169,6 +168,17 @@ class SiteController extends Controller
                     "Gracias por su opinión. Su comentario será publicado una vez que sea moderado!"
                 );
             } elseif ($comentario->save()) {
+                $comentario = new Comentario(['scenario' => 'comentar']);
+                Yii::$app->session->setFlash(
+                    "success", 
+                    "Gracias por su opinión. Su comentario será publicado una vez que sea moderado!"
+                );
+            } else {
+                Yii::$app->session->setFlash("error", "Su comentario no pudo ser registrado!");
+            }
+            */
+
+            if ($comentario->save()) {
                 $comentario = new Comentario(['scenario' => 'comentar']);
                 Yii::$app->session->setFlash(
                     "success", 

@@ -50,8 +50,8 @@ class Comentario extends \yii\db\ActiveRecord
             [['correo', 'web'], 'string', 'max' => 100],
             ['web', 'url', 'defaultScheme' => 'http', 'message' => 'Por favor introduzca la URL completa, ej: www.blonder413.com'],
             [['rel'], 'string', 'max' => 20],
-            [['ip'], 'string', 'max' => 15],
-            [['puerto'], 'string', 'max' => 5],
+//            [['ip'], 'string', 'max' => 15],
+//            [['puerto'], 'string', 'max' => 5],
             [['verifyCode'], 'captcha', 'on'=>'comentar'],
             [['estado'], 'default', 'value' => self::ESTADO_INACTIVO],
             [['articulo_id'], 'exist', 'skipOnError' => true, 'targetClass' => Articulo::className(), 'targetAttribute' => ['articulo_id' => 'id']],
@@ -73,8 +73,8 @@ class Comentario extends \yii\db\ActiveRecord
             'fecha'         => 'Fecha',
             'articulo_id'   => 'Artículo',
             'estado'        => 'Estado',
-            'ip'            => 'Ip',
-            'puerto'        => 'Puerto',
+//            'ip'            => 'Ip',
+//            'puerto'        => 'Puerto',
         ];
     }
 

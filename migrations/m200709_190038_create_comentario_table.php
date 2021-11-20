@@ -29,8 +29,8 @@ class m200709_190038_create_comentario_table extends Migration
             'fecha'         => $this->dateTime()->notNull(),
             'articulo_id'    => $this->integer()->notNull(),
             'estado'        => $this->boolean()->defaultValue(false)->notNull(),
-            'ip'            => $this->string(15),
-            'puerto'        => $this->string(5)
+//            'ip'            => $this->string(15),
+//            'puerto'        => $this->string(5)
         ], $tableOptions);
         $this->addForeignKey(
             'articulocomentario', 'comentario', 'articulo_id', 'articulo', 'id', 'no action', 'no action'
