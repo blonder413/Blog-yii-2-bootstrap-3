@@ -219,7 +219,8 @@ class SeedController extends Controller {
             Yii::$app->db->createCommand()->batchInsert('comentario',
                 [
                     'nombre', 'correo', 'web', 'rel', 'comentario', 'fecha', 
-                    'articulo_id', 'estado', 'ip', 'puerto'
+                    'articulo_id', 'estado',
+//                    'ip', 'puerto'
                 ],
                 [
                     [
@@ -231,8 +232,8 @@ class SeedController extends Controller {
                         new Expression('NOW()'),
                         $faker->numberBetween(1,500),
                         $faker->numberBetween(0,1),
-                        $faker->word,
-                        '413'
+//                        $faker->word,
+//                        '413'
                     ],
                 ]
             )->execute();
