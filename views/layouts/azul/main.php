@@ -31,41 +31,10 @@ AppAsset::register($this);
     <!--<link rel="image_src" href="<?php //echo Yii::$app->homeUrl . 'web/img/' . $this->image_src . '.png' ?>">-->
     <link href="//netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css" rel="stylesheet">
     <link rel="alternate" type="application/rss+xml" title="RSS feed" href="/rss.xml" />
-    
-    <link rel="canonical" href="/web/tweet-button">
-    <link rel="me" href="https://twitter.com/blonder413">
-    
-    <!-- Registro en Google -->
-    <!-- Put the following javascript before the closing </head> tag. -->
-    <script>
-        (function() {
-            var cx = '009014689535229426168:oaz4ieig01w';
-            var gcse = document.createElement('script');
-            gcse.type = 'text/javascript';
-            gcse.async = true;
-            gcse.src = (document.location.protocol == 'https:' ? 'https:' : 'http:') +
-                    '//www.google.es/cse/cse.js?cx=' + cx;
-            var s = document.getElementsByTagName('script')[0];
-            s.parentNode.insertBefore(gcse, s);
-        })();
-    </script>
-    <!-- /Registro en Google -->
-    
 </head>
 <body>
 
 <?php $this->beginBody() ?>
-
-    <!--Facebook page plugin-->
-    <div id="fb-root"></div>
-    <script>(function(d, s, id) {
-      var js, fjs = d.getElementsByTagName(s)[0];
-      if (d.getElementById(id)) return;
-      js = d.createElement(s); js.id = id;
-      js.src = "//connect.facebook.net/es_LA/sdk.js#xfbml=1&version=v2.8";
-      fjs.parentNode.insertBefore(js, fjs);
-    }(document, 'script', 'facebook-jssdk'));</script>
-    <!--/Facebook page plugin-->
 
     <header>
         <?php
@@ -147,42 +116,6 @@ AppAsset::register($this);
     <section class="main container">
       <div class="row">
 
-            <!-- Google Adsense -->
-            <!-- BORRAR ESTA LÍNEA
-            <div class="col-sm-12 col-md-12">
-                <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
-                <!-- bannerresponsive -->
-            <!-- BORRAR ESTA LÍNEA
-                <ins class="adsbygoogle"
-                     style="display:block"
-                     data-ad-client="ca-pub-2208995637216263"
-                     data-ad-slot="1780166723"
-                     data-ad-format="auto"></ins>
-                <script>
-                (adsbygoogle = window.adsbygoogle || []).push({});
-                </script>
-                <br>
-            </div>
-            <!-- End Google Adsense -->
-
-          <!-- Buscador de Google -->
-          <div class="col-sm-12">
-                <script>
-                (function() {
-                  var cx = '009014689535229426168:oaz4ieig01w';
-                  var gcse = document.createElement('script');
-                  gcse.type = 'text/javascript';
-                  gcse.async = true;
-                  gcse.src = (document.location.protocol == 'https:' ? 'https:' : 'http:') +
-                      '//cse.google.com/cse.js?cx=' + cx;
-                  var s = document.getElementsByTagName('script')[0];
-                  s.parentNode.insertBefore(gcse, s);
-                })();
-              </script>
-              <gcse:search></gcse:search>
-            </div>
-          <!-- /Buscador de Google -->
-
         <section class="posts col-md-9">
             <?= Breadcrumbs::widget([
                 'links' => isset($this->params['breadcrumbs']) ? $this->params['breadcrumbs'] : [],
@@ -220,19 +153,7 @@ AppAsset::register($this);
                         '@github',
                         ['target' => '_blank', 'title'  => 'Mi repositorio en Github']
                     ) ?>
-            
-                    <?php /*echo Html::a(
-                        Html::img("@web/img/linked-in-c.png", ['class'=>'img-thumbnail','width' => '50', 'alt' => 'Mi perfil en LinkedIn']),
-                        '@linkedin',
-                        ['target' => '_blank', 'title'  => 'Mi perfil en LinkedIn']
-                    )*/ ?>
-            
-                    <?php /*echo Html::a(
-                        Html::img("@web/img/delicious-c.png", ['class'=>'img-thumbnail','width' => '50', 'alt' => 'Mi enlaces en Delicious']),
-                        '@delicious',
-                        ['target' => '_blank', 'title'  => 'Mi enlaces en Delicious']
-                    )*/ ?>
-            
+
                     <?php /*echo Html::a(
                         Html::img("@web/img/rss-c.png", ['class'=>'img-thumbnail','width' => '50', 'alt' => 'Mis Feeds RSS']),
                         ['/rss.xml'],
@@ -344,24 +265,6 @@ AppAsset::register($this);
                                 'target'    => '_blank',
                             ]
                         ) ?>
-                
-                        <?php /* echo Html::a(
-                            Html::img("@web/img/webs/midas-ingenieria.png", ['width' => '35']) . " Midas Ingeniería",
-                            'http://midasingenieria.com/',
-                            [
-                                'class'     => 'list-group-item',
-                                'target'    => '_blank',
-                            ]
-                        )*/ ?>
-                
-                        <?php /* echo Html::a(
-                            Html::img("@web/img/webs/directorio-ladorada.png", ['width' => '35']) . " Directorio La Dorada",
-                            'http://www.directorioladorada.com/',
-                            [
-                                'class'     => 'list-group-item',
-                                'target'    => '_blank',
-                            ]
-                        )*/ ?>
                 
                     </div>
                 </div>
