@@ -10,13 +10,13 @@ use yii\helpers\Html;
 use yii\bootstrap\ActiveForm;
 
 
-$this->title = 'Signup';
+$this->title = 'Registro';
 $this->params['breadcrumbs'][] = $this->title;
 ?>
 <div class="site-signup">
     <h1><?= Html::encode($this->title) ?></h1>
 
-    <p>Please fill out the following fields to signup:</p>
+    <p>Por favor complete los siguientes campos para registrar un usuario:</p>
 
     <div class="row">
         <div class="col-lg-5">
@@ -24,9 +24,15 @@ $this->params['breadcrumbs'][] = $this->title;
             
                 <?= $form->field($model, 'name')->textInput(['autofocus' => true]) ?>
 
-                <?= $form->field($model, 'username')->textInput(['autofocus' => true]) ?>
+                <?= $form->field($model, 'username')->textInput([
+                    'autocomplete'  => 'off',
+                    'autofocus' => true
+                ]) ?>
 
-                <?= $form->field($model, 'email') ?>
+                <?= $form->field($model, 'email')->textInput([
+                    'autocomplete'  => 'off',
+                    'type'  => 'email',
+                ]) ?>
 
                 <?= $form->field($model, 'password')->widget(
                     PasswordInput::class, [
@@ -72,7 +78,7 @@ $this->params['breadcrumbs'][] = $this->title;
                 ]); ?>
 
                 <div class="form-group">
-                    <?= Html::submitButton('Signup', ['class' => 'btn btn-primary', 'name' => 'signup-button']) ?>
+                    <?= Html::submitButton('Registrar', ['class' => 'btn btn-primary', 'name' => 'signup-button']) ?>
                 </div>
 
             <?php ActiveForm::end(); ?>
