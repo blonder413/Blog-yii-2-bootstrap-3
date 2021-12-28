@@ -10,7 +10,7 @@ use yii\widgets\LinkPager;
 // Pone la fecha en español
 //setlocale(LC_TIME, 'es_CO.UTF-8');
 
-if (isset($_GET['page'])) {
+if (isset($_GET['page']) and is_numeric($_GET['page'])) {
     $this->title = "Blonder413 - Página " . $_GET['page'];
 } else {
     $this->title = "Blonder413";
