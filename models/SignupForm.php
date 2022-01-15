@@ -53,6 +53,7 @@ class SignupForm extends Model
             ],
             
             ['file', 'required'],
+            [['file'], 'image', 'extensions' => 'png,jpg,jpeg'],
         ];
     }
 
