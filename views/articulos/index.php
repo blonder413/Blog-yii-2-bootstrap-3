@@ -61,7 +61,7 @@ $this->params['breadcrumbs'][] = $this->title;
                 'format'    => 'raw',
                 'value'     => function($data){
                     return Html::a(
-                        $data->titulo,
+                        Html::encode("{$data->titulo}"),
                         Yii::getAlias('@web') . '/articulo/' . $data->slug,
                         [
                             'target'    => '_blank',
