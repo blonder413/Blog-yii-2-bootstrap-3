@@ -26,7 +26,14 @@ echo GridView::widget([
         ],
         'web:url',
 //        'rel',
-        'comentario:ntext',
+        //'comentario:ntext',
+        [
+            'attribute' => 'comentario',
+            'format'    => 'ntext',
+            'value'     => function($searchModel) {
+                return Html::encode("{$searchModel->comentario}");
+            }
+        ],
 //        [
 //            'attribute' => 'fecha',
 //            'format' => ['date', 'php:D d M Y g:i:s a'],
@@ -50,7 +57,7 @@ echo GridView::widget([
             'format' => 'raw',
             'value' => function ($searchModel) {
                 return Html::a(
-                    $searchModel->articulo->titulo, 
+                    Html::encode("{$searchModel->articulo->titulo}"),
                     "@web/articulo/" . $searchModel->articulo->slug
                 );
             },
