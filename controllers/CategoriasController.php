@@ -116,8 +116,8 @@ class CategoriasController extends Controller
             return $this->redirect(['index']);
           } else {
             $errors = '<ul>';
-               foreach ($model->getErrors() as $key => $value) {
-                   foreach ($value as $row => $field) {
+               foreach ($model->getErrors() as $value) {
+                   foreach ($value as $field) {
                        $errors .= "<li>" . $field . "</li>";
                    }
                }
@@ -176,8 +176,8 @@ class CategoriasController extends Controller
               Yii::$app->session->setFlash('success', Yii::t('app', "Categoría <strong>" . $model->categoria . "</strong> actualizada satisfactoriamente"));
             } else {
               $errors = '<ul>';
-                 foreach ($model->getErrors() as $key => $value) {
-                     foreach ($value as $row => $field) {
+                 foreach ($model->getErrors() as $value) {
+                     foreach ($value as $field) {
                          $errors .= "<li>" . $field . "</li>";
                      }
                  }
@@ -214,8 +214,8 @@ class CategoriasController extends Controller
               Yii::$app->session->setFlash("success", Yii::t('app', "Categoría $model->categoria borrada satisfactoriamente!"));
             } else {
               $errors = '';
-              foreach ($model->getErrors() as $key => $value) {
-                  foreach ($value as $row => $field) {
+              foreach ($model->getErrors() as $value) {
+                  foreach ($value as $field) {
                       $errors .= $field . "<br>";
                   }
               }
@@ -247,7 +247,7 @@ class CategoriasController extends Controller
                 exit("cannot open <$zipFileName>\n");
             }
 
-            foreach ($post as $key => $value) {
+            foreach ($post as $value) {
                 $model = $this->findModel($value);
                                 
                 /*
