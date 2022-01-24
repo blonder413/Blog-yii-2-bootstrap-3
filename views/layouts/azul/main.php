@@ -133,25 +133,25 @@ AppAsset::register($this);
                     <?= Html::a(
                         Html::img("@web/img/twitter.png", ['class'=>'img-thumbnail','width' => '50', 'alt' => 'Mi perfil en Twitter']),
                         '@twitter',
-                        ['target' => '_blank', 'title'  => 'Mi perfil en Twitter']
+                        ['rel' => 'noopener', 'target' => '_blank', 'title'  => 'Mi perfil en Twitter']
                     ) ?>
             
                     <?= Html::a(
                         Html::img("@web/img/facebook.png", ['class'=>'img-thumbnail','width' => '50', 'alt' => 'Mi biografía en Facebook']),
                         '@facebook',
-                        ['target' => '_blank', 'title'  => 'Mi perfil en Facebook']
+                        ['rel' => 'noopener', 'target' => '_blank', 'title'  => 'Mi perfil en Facebook']
                     ) ?>
 
                     <?= Html::a(
                         Html::img("@web/img/youtube.png", ['class'=>'img-thumbnail','width' => '50', 'alt' => 'Mi canal de Youtube']),
                         '@youtube',
-                        ['target' => '_blank', 'title'  => 'Mi canal de youtube']
+                        ['rel' => 'noopener', 'target' => '_blank', 'title'  => 'Mi canal de youtube']
                     ) ?>
                     
                     <?= Html::a(
                         Html::img("@web/img/github.png", ['class'=>'img-thumbnail','width' => '50', 'alt' => 'Mi repositorio en Github']),
                         '@github',
-                        ['target' => '_blank', 'title'  => 'Mi repositorio en Github']
+                        ['rel' => 'noopener', 'target' => '_blank', 'title'  => 'Mi repositorio en Github']
                     ) ?>
 
                     <?php /*echo Html::a(
@@ -214,54 +214,60 @@ AppAsset::register($this);
                 
                         <?= Html::a(
                             Html::img("@web/img/webs/blonder413-blogspot.png", ['width' => '35']) . " Blonder413 - Blogger",
-                            'http://blonder413.blogspot.com/',
+                            'https://blonder413.blogspot.com/',
                             [
                                 'class'     => 'list-group-item',
+                                'rel'       => 'noopener',
                                 'target'    => '_blank',
                             ]
                         ) ?>
                         
                         <?= Html::a(
                             Html::img("@web/img/webs/blonder413-wordpress.png", ['width' => '35']) . " Blonder413 - Wordpress",
-                            'http://blonder413.wordpress.com/',
+                            'https://blonder413.wordpress.com/',
                             [
                                 'class'     => 'list-group-item',
+                                'rel'       => 'noopener',
                                 'target'    => '_blank',
                             ]
                         ) ?>
                 
                         <?= Html::a(
                             Html::img("@web/img/webs/cesarcancino.png", ['width' => '35']) . " WebMaster César Cancino",
-                            'http://www.cesarcancino.com/',
+                            'https://www.cesarcancino.com/',
                             [
                                 'class'     => 'list-group-item',
+                                'rel'       => 'noopener',
                                 'target'    => '_blank',
                             ]
                         ) ?>
                 
                         <?= Html::a(
                             Html::img("@web/img/webs/oscar-gomez.png", ['width' => '35']) . " Oscar Gómez",
-                            'http://www.oscar-gomez.net',
+                            'https://www.oscar-gomez.net',
                             [
                                 'class'     => 'list-group-item',
+                                'rel'       => 'noopener',
                                 'target'    => '_blank',
                             ]
                         ) ?>
                 
                         <?= Html::a(
                             Html::img("@web/img/webs/keyphercom.png", ['width' => '35']) . " Keyphercom",
-                            'http://www.keyphercom.com/',
+                            'https://www.keyphercom.com/',
                             [
                                 'class'     => 'list-group-item',
+                                'rel'       => 'noopener',
                                 'target'    => '_blank',
                             ]
                         ) ?>
                 
                         <?= Html::a(
                             Html::img("@web/img/webs/tecnodidactas.png", ['width' => '35']) . " Tecnodidactas",
-                            'http://www.tecnodidactas.com/',
+                            'https://www.tecnodidactas.com/',
                             [
                                 'class'     => 'list-group-item',
+                                'rel'       => 'noopener',
                                 'target'    => '_blank',
                             ]
                         ) ?>
