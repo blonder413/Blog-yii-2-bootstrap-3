@@ -109,6 +109,9 @@ $this->registerJs($script);
         <li>
             Linux: Sistema Operativo, comandos y utilidad
         </li>
+        <li>
+            Aplicación de la calidad de software en el proceso de desarrollo
+        </li>
     </ul>
 
     <h3>Software utilizado para el desarrollo</h3>

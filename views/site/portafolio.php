@@ -18,17 +18,18 @@ $this->params['mas_visitados'] = $mas_visitados;
         <div class="col-sm-12 col-md-3">
             <?= Html::a(
                     Html::img(
-                            '@web/img/logo.png',
+                            '@web/img/portafolio/cease.jpg',
                             [
                                 // 'class' => 'img-circle',
                                 'alt' => 'Cilgas',
                                 'class' => 'img-thumbnail',
+                                'width' => '100%'
                             ]
                     ),
                     'https://www.facebook.com/ce.ltda',
                     [
                         'target' => '_blank',
-                        'rel' => 'nofollow',
+                        'rel' => 'nofollow noopener',
                     ]
             ) ?>
             <h4>Ce Ase Ingeniería</h4>
@@ -36,20 +37,13 @@ $this->params['mas_visitados'] = $mas_visitados;
         </div>
 
         <div class="col-sm-12 col-md-3">
-            <?= Html::a(
-                    Html::img(
-                            '@web/img/logo.png',
-                            [
-                                // 'class' => 'img-circle',
-                                'alt' => 'Diócesis La Dorada - Guaduas',
-                                'class' => 'img-thumbnail',
-                            ]
-                    ),
-                    'http://www.diocesisdeladoradaguaduas.org/',
-                    [
-                        'target' => '_blank',
-                        'rel' => 'nofollow',
-                    ]
+            <?= Html::img(
+                '@web/img/logo.png',
+                [
+                    // 'class' => 'img-circle',
+                    'alt' => 'Diócesis La Dorada - Guaduas',
+                    'class' => 'img-thumbnail',
+                ]
             ) ?>
             <h4>Diócesis La Dorada - Guaduas</h4>
             <p>Implementación del sistema dinámico para la publicación de noticias.</p>
@@ -68,7 +62,7 @@ $this->params['mas_visitados'] = $mas_visitados;
                     'http://ladorada-caldas.gov.co/',
                     [
                         'target' => '_blank',
-                        'rel' => 'nofollow',
+                        'rel' => 'nofollow noopener',
                     ]
             ) ?>
             <h4>Alcaldía La Dorada</h4>
@@ -79,21 +73,14 @@ $this->params['mas_visitados'] = $mas_visitados;
         </div>
 
         <div class="col-sm-12 col-md-3">
-            <?= Html::a(
-                    Html::img(
-                            '@web/img/logo.png',
-                            [
-                                // 'class' => 'img-circle',
-                                'alt' => 'Midas Ingeniería',
-                                'class' => 'img-thumbnail',
-                            ]
-                    ),
-                    'http://midasingenieria.com/',
-                    [
-                        'target' => '_blank',
-                        'rel' => 'nofollow',
-                    ]
-            ) ?>
+            <?= Html::img(
+                '@web/img/portafolio/midasingenieria.png',
+                [
+                    // 'class' => 'img-circle',
+                    'alt' => 'Midas Ingeniería',
+                    'class' => 'img-thumbnail',
+                ]
+            ); ?>
             <h4>Midas Ingeniería</h4>
             <p>Desarrollo del Sitio web oficial de la empresa Midas Ingeniería.</p>
         </div>
@@ -101,45 +88,30 @@ $this->params['mas_visitados'] = $mas_visitados;
     <div class="row">
 
         <div class="col-sm-12 col-md-3">
-            <?= Html::a(
-                    Html::img(
-                            '@web/img/logo.png',
-                            [
-                                // 'class' => 'img-circle',
-                                'alt' => 'Directorio La Dorada Caldas',
-                                'class' => 'img-thumbnail',
-                            ]
-                    ),
-                    'http://www.directorioladorada.com/',
-                    [
-                        'target' => '_blank',
-                        'rel' => 'nofollow',
-                    ]
-            ) ?>
+            <?= Html::img(
+                '@web/img/logo.png',
+                [
+                    // 'class' => 'img-circle',
+                    'alt' => 'Directorio La Dorada Caldas',
+                    'class' => 'img-thumbnail',
+                ]
+            ); ?>
             <h4>Directorio La Dorada Caldas</h4>
             <p>Desarrollo del sitio web que funciona como directorio de empresas locales de La Dorada Caldas.</p>
         </div>
 
         <div class="col-sm-12 col-md-3">
-            <?= Html::a(
-                    Html::img(
-                            '@web/img/logo.png',
-                            [
-                                // 'class' => 'img-circle',
-                                'alt' => 'Blog Blonder413',
-                                'class' => 'img-thumbnail',
-                            ]
-                    ),
-                    'http://www.blonder413.com/',
-                    [
-                        'target' => '_blank',
-                        'rel' => 'nofollow',
-                    ]
-            ) ?>
+            <?= Html::img(
+                '@web/img/logo.png',
+                [
+                    // 'class' => 'img-circle',
+                    'alt' => 'Blog Blonder413',
+                    'class' => 'img-thumbnail',
+                ]
+            ); ?>
             <h4>Blog Blonder413</h4>
             <p>
-                Desarrollo de mi blog personal con PHP nativo con varias 
-                actualizaciones y con Yii Framework con varias actualizaciones.
+                Desarrollo de un blog personal con PHP 5.
             </p>
         </div>
 
@@ -153,10 +125,11 @@ $this->params['mas_visitados'] = $mas_visitados;
                                 'class' => 'img-thumbnail',
                             ]
                     ),
-                    '#',
+                    'https://gitlab.com/midas-ingenieria/reserva-legal',
                     [
+                        'rel' => 'noopener',
                         'target' => '_blank',
-                        'rel' => 'nofollow',
+                        'rel' => 'nofollow noopener',
                     ]
             ) ?>
             <h4>Biblioteca legal</h4>
@@ -167,7 +140,7 @@ $this->params['mas_visitados'] = $mas_visitados;
         <div class="col-sm-12 col-md-3">
             <?= Html::a(
                     Html::img(
-                            '@web/img/logo.png',
+                            '@web/img/portafolio/alcaldia-yii2.png',
                             [
                                 // 'class' => 'img-circle',
                                 'alt' => 'Alcaldía La Dorada',
@@ -177,7 +150,7 @@ $this->params['mas_visitados'] = $mas_visitados;
                     'http://ladorada-caldas.gov.co/',
                     [
                         'target' => '_blank',
-                        'rel' => 'nofollow',
+                        'rel' => 'nofollow noopener',
                     ]
             ) ?>
             <h4>Alcaldía La Dorada</h4>
@@ -191,48 +164,25 @@ $this->params['mas_visitados'] = $mas_visitados;
 
     <div class="row">
 
-
-        <!--
-        <div class="col-sm-12 col-md-4">
-<?= Html::a(
-        Html::img(
-                '@web/img/logo.png',
+        <div class="col-sm-12 col-md-3">
+            <?= Html::a(
+                Html::img(
+                        '@web/img/portafolio/blog-yii2.png',
+                        [
+                            // 'class' => 'img-circle',
+                            'alt' => 'Blog Blonder413',
+                            'class' => 'img-thumbnail',
+                        ]
+                ),
+                'https://gitlab.com/blonder413/blog-yii-2-bootstrap-3',
                 [
-                    // 'class' => 'img-circle',
-                    'alt' => 'Directorio La Dorada Caldas',
-                    'class' => 'img-thumbnail',
+                    'target' => '_blank',
+                    'rel' => 'nofollow noopener',
                 ]
-        ),
-        'http://www.directorioladorada.com/',
-        [
-            'target' => '_blank',
-            'rel' => 'nofollow',
-        ]
-) ?>
-            <h3>Directorio La Dorada Caldas</h3>
-            <p>Desarrollo del sitio web que funciona como directorio de empresas locales de La Dorada Caldas.</p>
-        </div>
-        -->
-        <!--
-        <div class="col-sm-12 col-md-4">
-<?= Html::a(
-        Html::img(
-                '@web/img/logo.png',
-                [
-                    // 'class' => 'img-circle',
-                    'alt' => 'Blog Blonder413',
-                    'class' => 'img-thumbnail',
-                ]
-        ),
-        'http://www.blonder413.com/',
-        [
-            'target' => '_blank',
-            'rel' => 'nofollow',
-        ]
-) ?>
+            ) ?>
             <h4>Blog Blonder413</h4>
-            <p>Desarrollo de mi blog personal.</p>
+            <p>Desarrollo de un blog con Yii Framework 2.</p>
         </div>
-        -->
+        
     </div>
 </div>

@@ -157,8 +157,10 @@ class CategoriasController extends Controller
             
             // si subo otra imagen tengo que remplazar la anterior
             if($model->archivo) {
-                // borro el archivo anterior
-                unlink('img/categorias/' . $model->imagen);
+                if (file_exists('img/categorias/' . $model->imagen)) {
+                    // borro el archivo anterior
+                    unlink('img/categorias/' . $model->imagen);
+                }
                 $model->imagen = Helper::limpiaUrl($model->categoria . '.' . $model->archivo->extension);
             } else {
               // si cambia el nombre del curso renombro la imagen
@@ -171,7 +173,7 @@ class CategoriasController extends Controller
               if($model->archivo) {
                 $model->archivo->saveAs( 'img/categorias/' . $model->imagen);
               }
-              Yii::$app->session->setFlash('success', Yii::t('app', "Categoría $model->categoria actualizada satisfactoriamente"));
+              Yii::$app->session->setFlash('success', Yii::t('app', "Categoría <strong>" . $model->categoria . "</strong> actualizada satisfactoriamente"));
             } else {
               $errors = '<ul>';
                  foreach ($model->getErrors() as $key => $value) {
