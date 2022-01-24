@@ -30,6 +30,7 @@ use yii\imagine\Image;
 class Categoria extends ActiveRecord
 {
     public $archivo;
+    const RUTA_IMAGEN = 'img/categorias/';
     
     /**
      * {@inheritdoc}

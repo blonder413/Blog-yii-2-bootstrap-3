@@ -109,8 +109,8 @@ class CategoriasController extends Controller
           $model->imagen = Helper::limpiaUrl($model->categoria . '.' . $model->archivo->extension);
           if ($model->save()) {
             
-            $model->archivo->saveAs( 'img/categorias/' . $model->imagen);
-            $model->resizeImage('img/categorias/' . $model->imagen, 300, 300);
+            $model->archivo->saveAs( $model::RUTA_IMAGEN . $model->imagen);
+            $model->resizeImage($model::RUTA_IMAGEN . $model->imagen, 300, 300);
 
             Yii::$app->session->setFlash('success', Yii::t('app', "Categoría $model->categoria creada satisfactoriamente"));
             return $this->redirect(['index']);
@@ -157,21 +157,21 @@ class CategoriasController extends Controller
             
             // si subo otra imagen tengo que remplazar la anterior
             if($model->archivo) {
-                if (file_exists('img/categorias/' . $model->imagen)) {
+                if (file_exists($model::RUTA_IMAGEN . $model->imagen)) {
                     // borro el archivo anterior
-                    unlink('img/categorias/' . $model->imagen);
+                    unlink($model::RUTA_IMAGEN . $model->imagen);
                 }
                 $model->imagen = Helper::limpiaUrl($model->categoria . '.' . $model->archivo->extension);
             } else {
-              // si cambia el nombre del curso renombro la imagen
+              // si cambia el nombre de la categoría renombro la imagen
               $model->imagen = Helper::limpiaUrl($model->categoria . '.png');
               $oldImage = $model->oldAttributes['imagen'];
-              rename('img/categorias/' . $oldImage, 'img/categorias/' . $model->imagen);
+              rename($model::RUTA_IMAGEN . $oldImage, $model::RUTA_IMAGEN . $model->imagen);
             }
             
             if ($model->save()) {
               if($model->archivo) {
-                $model->archivo->saveAs( 'img/categorias/' . $model->imagen);
+                $model->archivo->saveAs( $model::RUTA_IMAGEN . $model->imagen);
               }
               Yii::$app->session->setFlash('success', Yii::t('app', "Categoría <strong>" . $model->categoria . "</strong> actualizada satisfactoriamente"));
             } else {
@@ -210,7 +210,7 @@ class CategoriasController extends Controller
         
         try{  
             if($model->delete()) {
-              unlink('img/categorias/' . $model->imagen);
+              unlink($model::RUTA_IMAGEN . $model->imagen);
               Yii::$app->session->setFlash("success", Yii::t('app', "Categoría $model->categoria borrada satisfactoriamente!"));
             } else {
               $errors = '';
@@ -260,7 +260,7 @@ class CategoriasController extends Controller
                 }
                 */
 
-                $file = 'img/categorias/' . $model->imagen;
+                $file = $model::RUTA_IMAGEN . $model->imagen;
                 if (is_file($file) && is_readable($file)) {
                     $zip->addFile($file, '/' . $model->imagen);
                 }
