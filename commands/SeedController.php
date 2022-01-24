@@ -4,21 +4,20 @@
 
 namespace app\commands;
 
-use app\models\Seguridad;
-use yii\console\Controller;
 use Yii;
+use app\models\Seguridad;
 use yii\base\InvalidConfigException;
-use yii\db\Expression;
-use yii\db\QueryBuilder;
+use yii\console\Controller;
+use yii\db\{Expression, QueryBuilder};
 use yii\helpers\Console;
 use yii\rbac\DbManager;
+use \Faker\Factory;
 
 
 class SeedController extends Controller {
 
     public function actionIndex()
     {
-        $faker = \Faker\Factory::create('es_ES');
         $transaction = Yii::$app->db->beginTransaction();
         try {
             $this->actionUser();
@@ -39,7 +38,7 @@ class SeedController extends Controller {
      */
     public function actionUser()
     {
-        $faker = \Faker\Factory::create('es_ES');
+        $faker = Factory::create('es_ES');
         $this->stdout("insertando registros en la tabla user \n", Console::FG_YELLOW);
         
         Yii::$app->db->createCommand()->batchInsert('user',
@@ -98,7 +97,7 @@ class SeedController extends Controller {
      */
     public function actionCategoria()
     {
-        $faker = \Faker\Factory::create('es_ES');
+        $faker = Factory::create('es_ES');
 
         $this->stdout("insertando registros en la tabla categoría\n", Console::FG_YELLOW);
         for ($i = 0; $i < 50; $i++) {
@@ -132,7 +131,7 @@ class SeedController extends Controller {
      */
     public function actionCurso()
     {
-        $faker = \Faker\Factory::create('es_ES');
+        $faker = Factory::create('es_ES');
 
         $this->stdout("insertando registros en la tabla curso\n", Console::FG_YELLOW);
         for ($i=0; $i<10; $i++) {
@@ -166,7 +165,7 @@ class SeedController extends Controller {
      */
     public function actionArticulo()
     {
-        $faker = \Faker\Factory::create('es_ES');
+        $faker = Factory::create('es_ES');
 
         $this->stdout("insertando registros en la tabla articulo\n", Console::FG_YELLOW);
         $video = '<iframe width="560" height="315" src="https://www.youtube.com/embed/h371D0W46Dk" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>';
@@ -212,7 +211,7 @@ class SeedController extends Controller {
      */
     public function actionComentario()
     {
-        $faker = \Faker\Factory::create('es_ES');
+        $faker = Factory::create('es_ES');
 
         $this->stdout("insertando registros en la tabla comentario\n", Console::FG_YELLOW);
         for ($i=0; $i<100; $i++) {
