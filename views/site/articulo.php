@@ -28,7 +28,7 @@ $this->params['breadcrumbs'][] = $articulo->titulo;
 $formatter = \Yii::$app->formatter;
 ?>
 
-<h1><?= $articulo->titulo; ?></h1>
+<h1><?= Html::encode("{$articulo->titulo}"); ?></h1>
 <p><small>
         <span class="glyphicon glyphicon-user">&nbsp;</span>
         <?=
