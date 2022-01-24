@@ -114,32 +114,32 @@ $this->registerJs($script);
     <h3>Software utilizado para el desarrollo</h3>
     <ul class="list-style-none">
         <li>
-            <a href="https://netbeans.apache.org/" title="NetBeans IDE" target="_blank">
+            <a href="https://netbeans.apache.org/" rel='noopener' title="NetBeans IDE" target="_blank">
                 NetBeans IDE
             </a>
         </li>
         <li>
-            <a href="http://www.mozilla.org/es-ES/firefox/fx/" title="Mozilla Firefox" target="_blank">
+            <a href="http://www.mozilla.org/es-ES/firefox/fx/" rel='noopener' title="Mozilla Firefox" target="_blank">
                 Mozilla Firefox
             </a>
         </li>
         <li>
-            <a href="https://blonder413.blogspot.com/2020/05/instalar-lampp-en-ubuntu-2004.html" title="LAMP" target="_blank">
+            <a href="https://blonder413.blogspot.com/2020/05/instalar-lampp-en-ubuntu-2004.html" rel='noopener' title="LAMP" target="_blank">
                 LAMPP
             </a>
         </li>
         <li>
-            <a href="http://www.gimp.org/" title="GIMP" target="_blank">
+            <a href="http://www.gimp.org/" rel='noopener' title="GIMP" target="_blank">
                 Gimp
             </a>
         </li>
         <li>
-            <a href="http://inkscape.org/" title="Inkscape" target="_blank">
+            <a href="http://inkscape.org/" rel='noopener' title="Inkscape" target="_blank">
                 inkscape
             </a>
         </li>
         <li>
-            <a href="https://getcomposer.org/" title="Composer" target="_blank">
+            <a href="https://getcomposer.org/" rel='noopener' title="Composer" target="_blank">
                 composer
             </a>
         </li>
@@ -148,6 +148,6 @@ $this->registerJs($script);
     <hr>
     <div class="col col-sm-12">
         <iframe width="100%" height="500" frameborder="0" scrolling="no" marginheight="0" marginwidth="0" src="https://www.openstreetmap.org/export/embed.html?bbox=-74.74908828735353%2C5.427265668386307%2C-74.60575103759767%2C5.5045038058395015&amp;layer=mapnik" style="border: 1px solid black"></iframe>
-        <br/><small><a href="https://www.openstreetmap.org/#map=14/5.4659/-74.6774" target='_blank'>Ver mapa más grande</a></small>
+        <br/><small><a href="https://www.openstreetmap.org/#map=14/5.4659/-74.6774" rel='noopener' target='_blank'>Ver mapa más grande</a></small>
     </div>
 </div>
