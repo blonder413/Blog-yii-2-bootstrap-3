@@ -14,11 +14,7 @@ $this->params['breadcrumbs'][] = $this->title;
                 'alt'   => 'Página No Encontrada'
             ]
         ) ?>
-        <p><small>
-            <a href="https://es.vecteezy.com/vectores-gratis/mono" target="_blank">
-                Mono Vectores por Vecteezy
-            </a>
-        </small></p>
+        
         <h2><?= nl2br(Html::encode($message)) ?></h2>
         <p>
             Ha encontrado a <strong>Monker</strong>, lo que significa que al igual que él usted se encuentra perdido.
