@@ -216,7 +216,7 @@ class ComentarioController extends Controller
      */
     public function actionDelete($id)
     {
-        if ( !\Yii::$app->user->can('comentario-borrar')) {
+        if ( !\Yii::$app->user->can('comentario-eliminar')) {
             throw new ForbiddenHttpException();
         }
         

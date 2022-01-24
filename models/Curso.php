@@ -28,6 +28,7 @@ use Yii;
 class Curso extends ActiveRecord
 {
     public $archivo;
+    const RUTA_IMAGEN = 'img/cursos/';
     
     /**
      * {@inheritdoc}

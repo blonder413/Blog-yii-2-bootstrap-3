@@ -145,7 +145,7 @@ class TransmisionController extends Controller
      */
     public function actionDelete($id)
     {
-        if ( !\Yii::$app->user->can('transmision-borrar')) {
+        if ( !\Yii::$app->user->can('transmision-eliminar')) {
             throw new ForbiddenHttpException();
         }
         

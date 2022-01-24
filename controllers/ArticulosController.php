@@ -213,7 +213,7 @@ class ArticulosController extends Controller
         
         if ( 
                 !\Yii::$app->user->can('articulo-admin') and 
-                !\Yii::$app->user->can('articulo-borrar', ['model' => $model])
+                !\Yii::$app->user->can('articulo-eliminar', ['model' => $model])
             ) {
             throw new ForbiddenHttpException();
         }

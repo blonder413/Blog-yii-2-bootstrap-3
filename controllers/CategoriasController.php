@@ -202,7 +202,7 @@ class CategoriasController extends Controller
      */
     public function actionDelete($id)
     {
-        if ( !\Yii::$app->user->can('categoria-borrar')) {
+        if ( !\Yii::$app->user->can('categoria-eliminar')) {
             throw new ForbiddenHttpException();
         }
         

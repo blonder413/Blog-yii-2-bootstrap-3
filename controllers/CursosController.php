@@ -98,8 +98,11 @@ class CursosController extends Controller
           $model->archivo = UploadedFile::getInstance($model, 'archivo');
           $model->imagen = Helper::limpiaUrl($model->curso . '.' . $model->archivo->extension);
           if ($model->save()) {
-            $model->archivo->saveAs( 'img/cursos/' . $model->imagen);
-            Yii::$app->session->setFlash('success', Yii::t('app', "Courso $model->curso creado satisfactoriamente"));
+            $model->archivo->saveAs( $model::RUTA_IMAGEN . $model->imagen);
+            Yii::$app->session->setFlash(
+                'success', 
+                Yii::t('app', "Curso <strong>" . $model->curso ."</strong> creado satisfactoriamente")
+            );
             return $this->redirect(['index']);
           } else {
             $errors = '<ul>';
@@ -144,18 +147,18 @@ class CursosController extends Controller
             // si subo otra imagen tengo que remplazar la anterior
             if($model->archivo) {
                 // borro el archivo anterior
-                unlink('img/cursos/' . $model->imagen);
+                unlink($model::RUTA_IMAGEN . $model->imagen);
                 $model->imagen = Helper::limpiaUrl($model->curso . '.' . $model->archivo->extension);
             } else {
               // si cambia el nombre del curso renombro la imagen
               $model->imagen = Helper::limpiaUrl($model->curso . '.png');
               $oldImage = $model->oldAttributes['imagen'];
-              rename('img/cursos/' . $oldImage, 'img/cursos/' . $model->imagen);
+              rename($model::RUTA_IMAGEN . $oldImage, $model::RUTA_IMAGEN . $model->imagen);
             }
             
             if ($model->save()) {
               if($model->archivo) {
-                $model->archivo->saveAs( 'img/cursos/' . $model->imagen);
+                $model->archivo->saveAs( $model::RUTA_IMAGEN . $model->imagen);
               }
               Yii::$app->session->setFlash('success', Yii::t('app', "Curso $model->curso actualizado satisfactoriamente"));
             } else {
@@ -186,7 +189,7 @@ class CursosController extends Controller
      */
     public function actionDelete($id)
     {
-        if ( !\Yii::$app->user->can('curso-borrar')) {
+        if ( !\Yii::$app->user->can('curso-eliminar')) {
             throw new ForbiddenHttpException();
         }
         
@@ -194,7 +197,7 @@ class CursosController extends Controller
         
         try{
           if($model->delete()) {
-            unlink('img/cursos/' . $model->imagen);
+            unlink($model::RUTA_IMAGEN . $model->imagen);
             Yii::$app->session->setFlash("success", Yii::t('app', "Curso $model->curso borrado satisfactoriamente!"));
           } else {
             $errors = '';
