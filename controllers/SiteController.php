@@ -509,7 +509,7 @@ class SiteController extends Controller
                     ->andWhere("fin >= :ahora", [":ahora" => $ahora])
                     ->one();
 
-        $articulos = $mas_visitados = Articulo::find()->where('categoria_id = 15')
+        $articulos = Articulo::find()->where('categoria_id = 15')
                     ->orderBy('rand()')->limit(5)->all();
         $categorias = Categoria::find()->orderBy('categoria asc')->all();
         $mas_visitados = Articulo::find()->orderBy('vistas desc')->limit(5)->all();
@@ -545,7 +545,7 @@ class SiteController extends Controller
         
             $model->photo = Helper::limpiaUrl($model->username . '.' . $model->file->extension);
             
-            if ($user = $model->signup()) {
+            if ($model->signup()) {
                 
                 $model->file->saveAs( 'img/users/' . $model->photo);
 
@@ -574,7 +574,6 @@ class SiteController extends Controller
                 $errors = '<ul>';
                 foreach ($model->getErrors() as $key => $value) {
                     foreach ($value as $row => $field) {
-                        //Yii::$app->session->setFlash("danger", $field);
                         $errors .= "<li>" . $field . "</li>";
                     }
                 }
