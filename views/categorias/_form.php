@@ -18,12 +18,14 @@ use yii\widgets\ActiveForm;
 
     <?= $form->field($model, 'archivo')->widget(FileInput::classname(), [
         'pluginOptions' => [
-            'showCaption' => false,
+            'showCaption' => true,
+            'msgPlaceholder' => 'Seleccione un archivo jpg o png',
+            'showPreview' => false,
             'showRemove' => false,
             'showUpload' => false,
             'browseClass' => 'btn btn-primary btn-block',
             'browseIcon' => '<i class="glyphicon glyphicon-camera"></i> ',
-            'browseLabel' => 'Seleccione una foto'
+            'browseLabel' => 'Seleccione un archivo jpg o png'
         ],
         'options' => ['accept' => 'image/*']
     ]); ?>
