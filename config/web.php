@@ -53,7 +53,8 @@ $config = [
             'cookieValidationKey' => '2AYqoWPlSdU65zoMfUh6p56fAefztJyo',
             'parsers' => [
                 'application/json' => 'yii\web\JsonParser',
-            ]
+            ],
+            'csrfParam' => '_csrf-bootstrap-3',
         ],
         'cache' => [
             'class' => 'yii\caching\FileCache',
@@ -64,6 +65,7 @@ $config = [
 //            'loginUrl' => ['login'],
             'authTimeout' => 60 * 30,   // 30 minutos de inactividad para cierre de sesión automático
 //            'returnUrl' => '/',   // ruta a la que redirije al iniciar sesión
+            'identityCookie' => ['name' => '_identity-bootstrap-3', 'httpOnly' => true],
         ],
         'errorHandler' => [
             'errorAction' => 'site/error',
@@ -116,6 +118,7 @@ $config = [
             // 'db' => 'mydb',  // el identificador del componente de aplicación DB connection. Por defecto'db'.
             // 'sessionTable' => 'my_session', // nombre de la tabla de sesión. Por defecto 'session'.
             // 'timeout' => 10, segundos de inactividad para expirar la sesión
+            'name' => 'yii-bootstrap-3',
         ],
         'authManager'       => [
             'class'         => 'yii\rbac\DbManager',
