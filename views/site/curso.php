@@ -31,7 +31,7 @@ $this->params['mas_visitados'] = $mas_visitados;
     <div class="col-sm-12 col-md-3">
         <?=
         Html::img(
-                "@web/img/cursos/$curso->imagen",
+                "@web/web/img/cursos/$curso->imagen",
                 [
                     "alt" => $curso->curso,
                     "class" => "img-responsive thumbnail"
@@ -124,7 +124,7 @@ if ($pagination->totalCount < 15) {
                 <?=
                 Html::a(
                         Html::img(
-                                "@web/img/cursos/$value->imagen",
+                                "@web/web/img/cursos/$value->imagen",
                                 [
                                     // 'class' => 'img-circle',
                                     'alt' => $value->curso,

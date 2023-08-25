@@ -18,7 +18,7 @@ $this->params['mas_visitados'] = $mas_visitados;
         <div class="col-sm-12 col-md-3">
             <?= Html::a(
                     Html::img(
-                            '@web/img/portafolio/cease.jpg',
+                            '@web/web/img/portafolio/uno.png',
                             [
                                 // 'class' => 'img-circle',
                                 'alt' => 'Cilgas',
@@ -38,7 +38,7 @@ $this->params['mas_visitados'] = $mas_visitados;
 
         <div class="col-sm-12 col-md-3">
             <?= Html::img(
-                '@web/img/logo.png',
+                '@web/web/img/portafolio/nueve.png',
                 [
                     // 'class' => 'img-circle',
                     'alt' => 'Diócesis La Dorada - Guaduas',
@@ -52,7 +52,7 @@ $this->params['mas_visitados'] = $mas_visitados;
         <div class="col-sm-12 col-md-3">
             <?= Html::a(
                     Html::img(
-                            '@web/img/logo.png',
+                            '@web/web/img/portafolio/dos.png',
                             [
                                 // 'class' => 'img-circle',
                                 'alt' => 'Alcaldía La Dorada',
@@ -74,7 +74,7 @@ $this->params['mas_visitados'] = $mas_visitados;
 
         <div class="col-sm-12 col-md-3">
             <?= Html::img(
-                '@web/img/portafolio/midasingenieria.png',
+                '@web/web/img/portafolio/tres.png',
                 [
                     // 'class' => 'img-circle',
                     'alt' => 'Midas Ingeniería',
@@ -89,7 +89,7 @@ $this->params['mas_visitados'] = $mas_visitados;
 
         <div class="col-sm-12 col-md-3">
             <?= Html::img(
-                '@web/img/logo.png',
+                '@web/web/img/portafolio/cuatro.png',
                 [
                     // 'class' => 'img-circle',
                     'alt' => 'Directorio La Dorada Caldas',
@@ -102,7 +102,7 @@ $this->params['mas_visitados'] = $mas_visitados;
 
         <div class="col-sm-12 col-md-3">
             <?= Html::img(
-                '@web/img/logo.png',
+                '@web/web/img/portafolio/cinco.png',
                 [
                     // 'class' => 'img-circle',
                     'alt' => 'Blog Blonder413',
@@ -118,7 +118,7 @@ $this->params['mas_visitados'] = $mas_visitados;
         <div class="col-sm-12 col-md-3">
             <?= Html::a(
                     Html::img(
-                            '@web/img/logo.png',
+                            '@web/web/img/portafolio/seis.png',
                             [
                                 // 'class' => 'img-circle',
                                 'alt' => 'Biblioteca legal',
@@ -140,7 +140,7 @@ $this->params['mas_visitados'] = $mas_visitados;
         <div class="col-sm-12 col-md-3">
             <?= Html::a(
                     Html::img(
-                            '@web/img/portafolio/alcaldia-yii2.png',
+                            '@web/web/img/portafolio/siete.png',
                             [
                                 // 'class' => 'img-circle',
                                 'alt' => 'Alcaldía La Dorada',
@@ -167,7 +167,7 @@ $this->params['mas_visitados'] = $mas_visitados;
         <div class="col-sm-12 col-md-3">
             <?= Html::a(
                 Html::img(
-                        '@web/img/portafolio/blog-yii2.png',
+                        '@web/web/img/portafolio/ocho.png',
                         [
                             // 'class' => 'img-circle',
                             'alt' => 'Blog Blonder413',

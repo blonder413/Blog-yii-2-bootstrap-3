@@ -3,7 +3,6 @@
 use yii\helpers\Html;
 use yii\bootstrap\Modal;
 use app\models\Helper;
-use yeesoft\lightbox\Lightbox;
 
 /* @var $this yii\web\View */
 $this->title = 'Acerca';
@@ -24,32 +23,11 @@ $this->registerJs($script);
 
     <figure>
         
-            <?= Lightbox::widget([
-                'options' => [
-                    'fadeDuration' => '2000',
-//                    'albumLabel' => "Image %1 of %2",
-                ],
-                'linkOptions' => ['class' => 'btn'],
-                'imageOptions' => [
-                    'class' => 'text-center thumbnail',
-                    'alt' => 'Jonathan Morales Salazar',
-                ],
-                'items' => [
-                    [
-                        'thumb' => '@web/img/foto_thumbnail.jpg',
-                        'image' => '@web/img/foto.jpg',
-                        'title' => 'Jonathan Morales Salazar',
-//                        'group' => 'image-set1',
-                    ],
-                ],
-            ]);
-            ?>
-            
             <?php
-            /*
+            
               Modal::begin([
               'header' => Html::img(
-              '@web/web/img/photo.jpg',
+              '@web/web/img/photo.png',
               [
               'alt'           => 'Jonathan Morales Salazar',
               'title'         => 'Jonathan Morales Salazar',
@@ -57,7 +35,7 @@ $this->registerJs($script);
               ),
               'toggleButton' =>   ['label' =>
               Html::img(
-              '@web/web/img/photo.jpg',
+              '@web/web/img/photo.png',
               [
               'alt'           => 'Jonathan Morales Salazar',
               'title'         => 'Jonathan Morales Salazar',
@@ -69,7 +47,7 @@ $this->registerJs($script);
               echo '<p>Jonathan Morales Salazar</p>';
               echo '<p>Ingeniero de Sistemas</p>';
               Modal::end();
-             */
+             
             ?>
         
         <figcaption>

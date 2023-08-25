@@ -23,7 +23,7 @@ $config = [
         '@npm'   => '@vendor/npm-asset',
         '@facebook'     => 'https://www.facebook.com/Blonder413-111821686918726',
         '@github'       => 'https://github.com/blonder413/',
-        '@twitter'      => 'https://twitter.com/blonder413',
+        '@twitter'      => 'https://twitter.com/midasingenieria',
         '@youtube'      => 'https://www.youtube.com/channel/UCOBMvNSxe08V5E9qExfFt4Q',
     ],
     'components' => [

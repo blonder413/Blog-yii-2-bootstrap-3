@@ -23,7 +23,7 @@ $this->params['mas_visitados'] = $mas_visitados;
                 <?=
                 Html::a(
                         Html::img(
-                                "@web/img/cursos/$value->imagen",
+                                "@web/web/img/cursos/$value->imagen",
                                 [
                                     // 'class' => 'img-circle',
                                     'alt' => $value->curso,

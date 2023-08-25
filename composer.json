@@ -30,7 +30,6 @@
         "kartik-v/yii2-widget-fileinput": "dev-master",
         "miloschuman/yii2-highcharts-widget": "*",
         "bower-asset/jquery.inputmask": "^5.0",
-        "yeesoft/yii2-lightbox": "~0.1.0",
         "kartik-v/yii2-widget-datepicker": "dev-master",
         "kartik-v/yii2-field-range": "*",
         "yiisoft/yii2-imagine": "^2.2"

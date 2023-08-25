@@ -1,3 +1,4 @@
+assets/*
 # archivos de configuración
 /config/db.php
 /config/params.php

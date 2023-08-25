@@ -26,8 +26,8 @@ AppAsset::register($this);
     <?= Html::csrfMetaTags() ?>
     <title><?= Html::encode($this->title) ?></title>
     <?php $this->head() ?>
-    <link href="<?= Yii::$app->homeUrl ?>css/azul/estilos.css" rel="stylesheet" type="text/css">
-    <link href="<?= Yii::$app->homeUrl ?>img/favicon.png" rel="icon" type="image/vnd.microsoft.icon"/>
+    <link href="<?= Yii::$app->homeUrl ?>web/css/azul/estilos.css" rel="stylesheet" type="text/css">
+    <link href="<?= Yii::$app->homeUrl ?>web/img/favicon.png" rel="icon" type="image/vnd.microsoft.icon"/>
     <!--<link rel="image_src" href="<?php //echo Yii::$app->homeUrl . 'web/img/' . $this->image_src . '.png' ?>">-->
     <link href="//netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css" rel="stylesheet">
     <link rel="alternate" type="application/rss+xml" title="RSS feed" href="/rss.xml" />
@@ -131,25 +131,19 @@ AppAsset::register($this);
                 <div class="panel-body">
                     
                     <?= Html::a(
-                        Html::img("@web/img/twitter.png", ['class'=>'img-thumbnail','width' => '50', 'alt' => 'Mi perfil en Twitter']),
+                        Html::img("@web/web/img/twitter.png", ['class'=>'img-thumbnail','width' => '50', 'alt' => 'Mi perfil en Twitter']),
                         '@twitter',
                         ['rel' => 'noopener', 'target' => '_blank', 'title'  => 'Mi perfil en Twitter']
                     ) ?>
-            
-                    <?= Html::a(
-                        Html::img("@web/img/facebook.png", ['class'=>'img-thumbnail','width' => '50', 'alt' => 'Mi biografía en Facebook']),
-                        '@facebook',
-                        ['rel' => 'noopener', 'target' => '_blank', 'title'  => 'Mi perfil en Facebook']
-                    ) ?>
 
                     <?= Html::a(
-                        Html::img("@web/img/youtube.png", ['class'=>'img-thumbnail','width' => '50', 'alt' => 'Mi canal de Youtube']),
+                        Html::img("@web/web/img/youtube.png", ['class'=>'img-thumbnail','width' => '50', 'alt' => 'Mi canal de Youtube']),
                         '@youtube',
                         ['rel' => 'noopener', 'target' => '_blank', 'title'  => 'Mi canal de youtube']
                     ) ?>
                     
                     <?= Html::a(
-                        Html::img("@web/img/github.png", ['class'=>'img-thumbnail','width' => '50', 'alt' => 'Mi repositorio en Github']),
+                        Html::img("@web/web/img/github.png", ['class'=>'img-thumbnail','width' => '50', 'alt' => 'Mi repositorio en Github']),
                         '@github',
                         ['rel' => 'noopener', 'target' => '_blank', 'title'  => 'Mi repositorio en Github']
                     ) ?>
@@ -170,7 +164,7 @@ AppAsset::register($this);
                         <?php foreach( $this->params['categorias'] as $key => $value ): ?>
                           <?= Html::a(
                             Html::img(
-                                "@web/img/categorias/$value->imagen", 
+                                "@web/web/img/categorias/$value->imagen", 
                                 [
                                       'alt' => $value->categoria,
                                       'width' => '40'
@@ -213,7 +207,7 @@ AppAsset::register($this);
                     <div class="list-group">
                 
                         <?= Html::a(
-                            Html::img("@web/img/webs/blonder413-blogspot.png", ['width' => '35']) . " Blonder413 - Blogger",
+                            Html::img("@web/web/img/webs/blonder413-blogspot.png", ['width' => '35', 'alt' => 'Blonder413 Blogger']) . " Blonder413 - Blogger",
                             'https://blonder413.blogspot.com/',
                             [
                                 'class'     => 'list-group-item',
@@ -223,7 +217,7 @@ AppAsset::register($this);
                         ) ?>
                         
                         <?= Html::a(
-                            Html::img("@web/img/webs/blonder413-wordpress.png", ['width' => '35']) . " Blonder413 - Wordpress",
+                            Html::img("@web/web/img/webs/blonder413-wordpress.png", ['width' => '35']) . " Blonder413 - Wordpress",
                             'https://blonder413.wordpress.com/',
                             [
                                 'class'     => 'list-group-item',
@@ -233,7 +227,7 @@ AppAsset::register($this);
                         ) ?>
                 
                         <?= Html::a(
-                            Html::img("@web/img/webs/cesarcancino.png", ['width' => '35']) . " WebMaster César Cancino",
+                            Html::img("@web/web/img/webs/cesarcancino.png", ['width' => '35']) . " WebMaster César Cancino",
                             'https://www.cesarcancino.com/',
                             [
                                 'class'     => 'list-group-item',
@@ -243,7 +237,7 @@ AppAsset::register($this);
                         ) ?>
                 
                         <?= Html::a(
-                            Html::img("@web/img/webs/oscar-gomez.png", ['width' => '35']) . " Oscar Gómez",
+                            Html::img("@web/web/img/webs/oscar-gomez.png", ['width' => '35']) . " Oscar Gómez",
                             'https://www.oscar-gomez.net',
                             [
                                 'class'     => 'list-group-item',
@@ -251,27 +245,6 @@ AppAsset::register($this);
                                 'target'    => '_blank',
                             ]
                         ) ?>
-                
-                        <?= Html::a(
-                            Html::img("@web/img/webs/keyphercom.png", ['width' => '35']) . " Keyphercom",
-                            'https://www.keyphercom.com/',
-                            [
-                                'class'     => 'list-group-item',
-                                'rel'       => 'noopener',
-                                'target'    => '_blank',
-                            ]
-                        ) ?>
-                
-                        <?= Html::a(
-                            Html::img("@web/img/webs/tecnodidactas.png", ['width' => '35']) . " Tecnodidactas",
-                            'https://www.tecnodidactas.com/',
-                            [
-                                'class'     => 'list-group-item',
-                                'rel'       => 'noopener',
-                                'target'    => '_blank',
-                            ]
-                        ) ?>
-                
                     </div>
                 </div>
             </div>

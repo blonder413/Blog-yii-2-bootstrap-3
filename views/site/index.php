@@ -40,7 +40,7 @@ $formatter = \Yii::$app->formatter;
     <article class="post clear-fix">
           <?= Html::a(
               Html::img(
-                  '@web/img/categorias/' . $value->categoria->imagen,
+                  '@web/web/img/categorias/' . $value->categoria->imagen,
                   [
                       // 'class' => 'img-circle',
                       'alt'   => $value->categoria->categoria,
