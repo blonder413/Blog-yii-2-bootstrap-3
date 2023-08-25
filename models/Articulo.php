@@ -65,14 +65,14 @@ class Articulo extends MiActiveRecord
             [['titulo', 'slug'], 'string', 'max' => 150],
             [['tema', 'descarga'], 'string', 'max' => 100],
             [['resumen'], 'string', 'max' => 300],
-            [['video', 'etiquetas'], 'string', 'max' => 255],
+            [['video', 'etiquetas'], 'string', 'max' => 300],
             [['titulo'], 'unique'],
             [['slug'], 'unique'],
             [['estado'] , 'default', 'value' => self::ESTADO_ACTIVO],
-            [['categoria_id'], 'exist', 'skipOnError' => true, 'targetClass' => Categoria::className(), 'targetAttribute' => ['categoria_id' => 'id']],
-            [['curso_id'], 'exist', 'skipOnError' => true, 'targetClass' => Curso::className(), 'targetAttribute' => ['curso_id' => 'id']],
-            [['usuario_crea'], 'exist', 'skipOnError' => true, 'targetClass' => User::className(), 'targetAttribute' => ['usuario_crea' => 'id']],
-            [['usuario_modifica'], 'exist', 'skipOnError' => true, 'targetClass' => User::className(), 'targetAttribute' => ['usuario_modifica' => 'id']],
+            [['categoria_id'], 'exist', 'skipOnError' => true, 'targetClass' => Categoria::class, 'targetAttribute' => ['categoria_id' => 'id']],
+            [['curso_id'], 'exist', 'skipOnError' => true, 'targetClass' => Curso::class, 'targetAttribute' => ['curso_id' => 'id']],
+            [['usuario_crea'], 'exist', 'skipOnError' => true, 'targetClass' => User::class, 'targetAttribute' => ['usuario_crea' => 'id']],
+            [['usuario_modifica'], 'exist', 'skipOnError' => true, 'targetClass' => User::class, 'targetAttribute' => ['usuario_modifica' => 'id']],
         ];
     }
 
@@ -124,11 +124,11 @@ class Articulo extends MiActiveRecord
     {
         return [
             'sluggable' => [
-                'class' => SluggableBehavior::className(),
+                'class' => SluggableBehavior::class,
                 'attribute' => 'titulo',
                 //'slugAttribute' => 'seo_slug',
             ],
-//            OptimisticLockBehavior::className(),
+            // OptimisticLockBehavior::className(),
         ];
     }
     
@@ -172,7 +172,7 @@ class Articulo extends MiActiveRecord
      */
     public function getCategoria()
     {
-        return $this->hasOne(Categoria::className(), ['id' => 'categoria_id']);
+        return $this->hasOne(Categoria::class, ['id' => 'categoria_id']);
     }
 
     /**
@@ -182,7 +182,7 @@ class Articulo extends MiActiveRecord
      */
     public function getCurso()
     {
-        return $this->hasOne(Curso::className(), ['id' => 'curso_id']);
+        return $this->hasOne(Curso::class, ['id' => 'curso_id']);
     }
 
     /**
@@ -192,7 +192,7 @@ class Articulo extends MiActiveRecord
      */
     public function getUsuarioCrea()
     {
-        return $this->hasOne(User::className(), ['id' => 'usuario_crea']);
+        return $this->hasOne(User::class, ['id' => 'usuario_crea']);
     }
 
     /**
@@ -202,7 +202,7 @@ class Articulo extends MiActiveRecord
      */
     public function getUsuarioModifica()
     {
-        return $this->hasOne(User::className(), ['id' => 'usuario_modifica']);
+        return $this->hasOne(User::class, ['id' => 'usuario_modifica']);
     }
 
     /**
@@ -222,7 +222,7 @@ class Articulo extends MiActiveRecord
      */
     public function getCantidadComentarios()
     {
-        return $this->hasMany(Comentario::className(), ['articulo_id' => 'id'])
+        return $this->hasMany(Comentario::class, ['articulo_id' => 'id'])
                     ->where("estado = " . Comentario::ESTADO_ACTIVO)
                     ->count();
     }
@@ -242,7 +242,7 @@ class Articulo extends MiActiveRecord
         //setlocale(LC_TIME, 'spl_ES');
         //setlocale(LC_TIME, 'Spanish_Colombia');
         //setlocale(LC_TIME, 'es_CO.UTF-8');
-//        return date('l, M j \d\e Y G:i', strtotime($this->created_at));
+        // return date('l, M j \d\e Y G:i', strtotime($this->created_at));
         return strftime("%c", strtotime($this->fecha_crea));
     }
 }
