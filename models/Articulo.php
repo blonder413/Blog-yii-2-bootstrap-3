@@ -65,7 +65,7 @@ class Articulo extends MiActiveRecord
             [['titulo', 'slug'], 'string', 'max' => 150],
             [['tema', 'descarga'], 'string', 'max' => 100],
             [['resumen'], 'string', 'max' => 300],
-            [['video', 'etiquetas'], 'string', 'max' => 300],
+            [['video', 'etiquetas'], 'string', 'max' => 400],
             [['titulo'], 'unique'],
             [['slug'], 'unique'],
             [['estado'] , 'default', 'value' => self::ESTADO_ACTIVO],
